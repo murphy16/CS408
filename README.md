@@ -16,9 +16,10 @@ With vast quanties of textual data stored on the internet, news columnists, blog
 
 Project Objectives
 ------------------
-*
-*
-*
+1. Create an easy-to-understand/easy-to-use user interface
+2. Allow users to quickly search a variety of sources (based on their terms)
+3. Allow users to have instant access to the latest news (based on their terms)
+4. Aid users in confirming/denying circulating rumors
 
 Stakeholders
 ------------------
