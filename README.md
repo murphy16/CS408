@@ -12,7 +12,7 @@ Team Members
 
 Problem Statement
 ------------------
-There is a vast amount of textual data stored on the internet; news columnists, bloggers, and social media gurus alike need a way to efficiently and effectively combine data from multiple websites in order to check the validity of a rumor. Without the combination of data from multiple sources and the scaling (of such sources) for common keywords, these writers could potentially risk losing credibility by promoting false information in his or her articles or posts. In order to avoid sacrificing their careers, they need a tool which will allow them to search multiple websites for keywords. This tool must also crawl through websites associated with entered key words to find common verbiage about the topic.
+There is a vast amount of textual data stored on the internet; news columnists, bloggers, and social media gurus alike need a way to efficiently and effectively combine this data from multiple sources in order to confirm the validity of a rumor. Without the combination of data from multiple sources and the scaling (of such sources) for common keywords, these writers could potentially risk losing credibility by promoting false information in his or her articles or posts. In order to avoid sacrificing their careers, they need a tool which will allow them to search multiple websites for keywords. This tool must also crawl through websites associated with entered key words to find common verbiage about the topic.
 
 Project Objectives
 ------------------
