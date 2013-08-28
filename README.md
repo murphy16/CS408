@@ -17,48 +17,28 @@ There is a massive amount of textual data being generated every minute in the wo
 
 Project Objectives
 ------------------
-1. Replace
-
-	*Case-Sensitive/Insensitive
-
-	*Whole Words
-
-	*Context (based upon selection)
-
-	*Wildcards
-
-	*Regex
-2. Compare / Diff 
-
-	*Differences between two files
-
-3. Java Swing-based GUI
-
-	*Text Editor
-
-	*Command Execution
-	
-4. Text Statistics
-
-	*Word Count
-
-	*Number of Brackets
-
-	*Number of Sentences
-
-	*Number of Spaces
-
-	*Search Result Count (based upon query input)
-
-5. Basic Cipher
-
-	*ROT13 Encryption
-
-	*ROT13 Decryption
-
-	*ROT-n Encryption
-
-	*ROT-n Decryption
+* Replace
+	* Case-Sensitive/Insensitive
+	* Whole Words
+	* Context (based upon selection)
+	* Wildcards
+	* Regex
+* Compare / Diff 
+	* Differences between two files
+* Java Swing-based GUI
+	* Text Editor
+	* Command Execution
+* Text Statistics
+	* Word Count
+	* Number of Brackets
+	* Number of Sentences
+	* Number of Spaces
+	* Search Result Count (based upon query input)
+* Basic Cipher
+	* ROT13 Encryption
+	* ROT13 Decryption
+	* ROT-n Encryption
+	* ROT-n Decryption
 	
 Stakeholders
 ------------------
