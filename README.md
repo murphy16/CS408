@@ -28,6 +28,11 @@ Project Objectives
 * Java Swing-based GUI
 	* Text Editor
 	* Command Execution
+	* Keyboard Shortcuts 
+		* Find
+		* Replace
+		* Statistics
+		* Ciphers
 * Text Statistics
 	* Word Count
 	* Number of Brackets
@@ -48,4 +53,7 @@ Youth and novice programmers who are learning how to utilize text editors and pr
 
 Project Deliverables
 ------------------
-A Java application with a graphical user interface that allows users to input text and perform a variety of operations on said text. These operations range from modifying the text, to searching through the text, to decrypting and encrypting the text, to tabulating statistics of the text.
+A Java application (.jar file) with a graphical user interface that allows users to input text and perform a variety of operations on said text. These operations range from modifying the text, to searching through the text, to decrypting and encrypting the text, to tabulating statistics of the text.
+
+To run the .jar file, one would either double-click on the file or launch it in the terminal using a command like  `java -jar kidtext.jar`. This will be the only file included with the project other than a simple documentation document listing all of the features and short-cuts built into the application.
+
