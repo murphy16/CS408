@@ -1,12 +1,19 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class StatisticsCalculatorTest {
 
-	public StatisticsCalculator statCalc = new StatisticsCalculator();
+	private StatisticsCalculator statCalc;
 	
+	@Before
+	public void setUp() throws Exception {
+		statCalc = new StatisticsCalculator();
+		}
+	
+	/** WORD COUNT TESTS **/
 	@Test
 	public void testWordCountSimple() {
 		String test1 = "this is a string without any trip ups.";
@@ -38,5 +45,36 @@ public class StatisticsCalculatorTest {
 		String test = "   this string has leading spaces.";
 		assertEquals(5, statCalc.wordCount(test));
 	}
+	
+	@Test
+	public void testWordCountOnlySpaces() {
+		String test = "          ";
+		assertEquals(0, statCalc.wordCount(test));
+	}
+	
+	/** BRACKET COUNT TESTS **/
 
+	@Test
+	public void testBracketCountEven() {
+		String test = "This is a string with {brackets}. There are {four}.";
+		assertEquals(4, statCalc.bracketCount(test));
+	}
+	
+	@Test
+	public void testBracketCountOdd() {
+		String test = "This {string} has an odd number of brackets }";
+		assertEquals(3, statCalc.bracketCount(test));
+	}
+	
+	@Test
+	public void testBracketCountEmptyString() {
+		String test = "";
+		assertEquals(0, statCalc.bracketCount(test));
+	}
+	
+	@Test
+	public void testBracketCountNoBrackets() {
+		String test = "this string has no brackets! At least no curly ones []()";
+		assertEquals(0, statCalc.bracketCount(test));
+	}
 }
