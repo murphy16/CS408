@@ -41,6 +41,14 @@ public class StatisticsCalculator {
 		if(inSentence) count++;
 		return count;
 	}
+
+	public int spacesCount(String content) {
+		int count = 0;
+		for (int i = 0; i < content.length(); i++) {
+			if(content.charAt(i) == ' ') count++;
+		}
+		return count;
+	}
 	
 	private boolean isAlpha(char ch) {
 		if((ch>=65 && ch<=90) || (ch>=97 || ch<=122)) {
@@ -50,4 +58,5 @@ public class StatisticsCalculator {
 			return false;
 		}
 	}
+
 }

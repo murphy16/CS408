@@ -120,4 +120,22 @@ public class StatisticsCalculatorTest {
 		assertEquals(2, statCalc.sentenceCount(test));
 	}
 	
+	@Test
+	public void testSpacesCountEmptyString() {
+		String test = "";
+		assertEquals(0, statCalc.spacesCount(test));
+	}
+	
+	@Test
+	public void testSpacesCountNoSpaces() {
+		String test = "thisisastringwithnospaces....butithasotherstuff";
+		assertEquals(0, statCalc.spacesCount(test));
+	}
+	
+	@Test
+	public void testSpacesNormalString() {
+		String test = "This string has spaces. It's pretty regular";
+		assertEquals(6, statCalc.spacesCount(test));
+	}
+	
 }
