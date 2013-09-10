@@ -26,4 +26,28 @@ public class StatisticsCalculator {
 		return count;
 	}
 
+	public int sentenceCount(String content) {
+		int count = 0;
+		boolean inSentence = false;
+		for (int i = 0; i < content.length(); i++) {
+			if(content.charAt(i) == '.' || content.charAt(i) == '!' || content.charAt(i) == '?') { //what characters do we consider to break up words?
+				if(inSentence) count++;
+				inSentence = false;
+			}
+			else if (isAlpha(content.charAt(i))){
+				inSentence = true;
+			}
+		}
+		if(inSentence) count++;
+		return count;
+	}
+	
+	private boolean isAlpha(char ch) {
+		if((ch>=65 && ch<=90) || (ch>=97 || ch<=122)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }

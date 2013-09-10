@@ -77,4 +77,47 @@ public class StatisticsCalculatorTest {
 		String test = "this string has no brackets! At least no curly ones []()";
 		assertEquals(0, statCalc.bracketCount(test));
 	}
+	
+	@Test
+	public void testSentenceCountOneSentence() {
+		String test = "This is a single sentence.";
+		assertEquals(1, statCalc.sentenceCount(test));
+	}
+	
+	@Test
+	public void testSentenceCountMultipleSentences() {
+		String test = "This is one sentence. This is another sentence.";
+		assertEquals(2, statCalc.sentenceCount(test));
+	}
+	
+	@Test
+	public void testSentenceCountRepeatingPeriods() {
+		String test = "This sentence has multiple periods....Here is another.";
+		assertEquals(2, statCalc.sentenceCount(test));
+	}
+	
+	@Test
+	public void testSentenceCountEmptyString() {
+		String test = "";
+		assertEquals(0, statCalc.sentenceCount(test));
+	}
+	
+	@Test
+	public void testSentenceCountLeadingPeriod() {
+		String test = ". Why does this string have a leading period. No one knows.";
+		assertEquals(2, statCalc.sentenceCount(test));
+	}
+	
+	@Test
+	public void testSentenceCountQuestionMark() {
+		String test = "Is this a question? This is an answer.";
+		assertEquals(2, statCalc.sentenceCount(test));
+	}
+	
+	@Test
+	public void testSentenceCountExclamationMark() {
+		String test = "This is exciting! Not really...";
+		assertEquals(2, statCalc.sentenceCount(test));
+	}
+	
 }
