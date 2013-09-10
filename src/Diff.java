@@ -1,5 +1,3 @@
-import java.lang.String;
-
 public class Diff {
   private static final int INDEX_NOT_FOUND = -1;
   private static final String EMPTY = "";
