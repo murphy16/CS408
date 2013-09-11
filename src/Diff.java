@@ -22,7 +22,7 @@ public class Diff {
       return INDEX_NOT_FOUND;
     }
     if (str1 == null || str2 == null) {
-      return 0;
+      return INDEX_NOT_FOUND;
     }
 
     int i;
