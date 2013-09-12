@@ -46,8 +46,33 @@ public class RotCipher
 		return EncryptedContent;
 	}
 	
+	public static String Decrypt(String EncryptedContent)
+	{
+		String DecryptedContent = "";
+		
+		for (int i = 0; i < EncryptedContent.length(); i++)
+		{
+			char ContentChar = EncryptedContent.charAt(i);
+			
+			if (Character.isLetter(ContentChar))
+			{
+    			if (Character.isUpperCase(ContentChar))
+					DecryptedContent += (char)(((ContentChar - 'A') - nKey) % 26 + 'A');
+				else
+					DecryptedContent += (char)(((ContentChar - 'a') - nKey) % 26 + 'a');
+			}
+			else
+			{
+				DecryptedContent += ContentChar;
+			}
+		}
+		
+		return DecryptedContent;
+	}
+
 	public void SetKey(int n)
 	{
-		this.nKey = n;
+		if (this.nKey != n)
+			this.nKey = n;
 	}
 }
