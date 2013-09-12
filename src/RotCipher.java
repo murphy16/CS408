@@ -12,12 +12,12 @@ public class RotCipher
 	
 	public RotCipher(int n)
 	{
-		SetKey(this.n);
+		SetKey(n);
 	}
 	
 	public RotCipher()
 	{
-		RotCipher(13); // defaults to ROT13
+		this(13); // defaults to ROT13
 	}
 	
 	/* Public Methods */
@@ -33,13 +33,13 @@ public class RotCipher
 			if (Character.isLetter(ContentChar))
 			{
     			if (Character.isUpperCase(ContentChar))
-					EncryptedContent.append((char)(((ContentChar - 'A') + nKey) % 26 + 'A'));
+					EncryptedContent += (char)(((ContentChar - 'A') + nKey) % 26 + 'A');
 				else
-					EncryptedContent.append((char)(((ContentChar - 'a') + nKey) % 26 + 'a'));
+					EncryptedContent += (char)(((ContentChar - 'a') + nKey) % 26 + 'a');
 			}
 			else
 			{
-				EncryptedContent.append(ContentChar);
+				EncryptedContent += ContentChar;
 			}
 		}
 		
@@ -48,12 +48,6 @@ public class RotCipher
 	
 	public void SetKey(int n)
 	{
-		nKey = this.n;
-	}
-	
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		SetKey(13);
-		System.out.print(Encrypt("ABCDE"));
+		this.nKey = n;
 	}
 }
