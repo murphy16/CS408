@@ -1,0 +1,21 @@
+Design Defects 
+1.	Just appended space to end of find and replace terms for whole word search.  While this is functional, it is also clunky.  Changed so that it instead splits the text into separate words and then compares each word.
+  a.	Note: words divided from one another by having a space between them.  Should other split conditions be added?
+2.	No way to update text to be searched if it is changed through something other than replace.  This means you must create a new Replace object to find/replace after editing text.  Added function that changes the Replace object’s text.
+3.	No way to change parameters for find/replace.  This means that there needs to be a Replace object for each possible combination of settings.  Added functions that change the parameters for a specific Replace object.  Together with the change above, that means that each file only needs to have one Replace object associated with it.
+
+Product 	KidText: Find and Replace
+Date 	09/13/13 
+Author 	Elizabeth Murphy
+Defect # 	Description 	Severity 	    How Corrected 
+1 	      In context replace, changes to text that would increase the character length of the selection were deleted.	
+                        Severity 2 	  Recorded part of text not selected and added it to end of selection after replacement
+2 	      “String not found” returned instead of proper text when changes were actually made.	
+                        Severity 1	  Reversed the conditions for the “if” statement so that they were correct.
+3	        When replacing whole words, extra space was added after the word that was changed	
+                        Severity 2	  Put space at end of word to find instead of word replacing it.
+4 	      When replacing whole words, space was removed from after the word that was changed	
+                        Severity 2	  Added space to the end of word replacing original as well.
+5	        Upon reassembling the text after searching for whole words, extra space at end of text	
+                        Severity 3	  Removed last word from loop and added it separately so extra space wouldn’t be appended.
+
